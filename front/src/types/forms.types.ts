@@ -82,3 +82,10 @@ export type TermsAndConditionsProps = {
     register: UseFormRegister<SignUpDataForm>;
     error?: string;
 }
+
+export type ProfilePictureUploadProps = {
+    preview: string;
+    fileInputRef: React.RefObject<HTMLInputElement>;
+    register: UseFormRegister<SignUpDataForm>;
+    handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
