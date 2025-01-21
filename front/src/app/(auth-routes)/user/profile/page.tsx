@@ -1,10 +1,7 @@
 import React from "react";
 
-import { nextAuthOptions } from "@/lib/authOptions";
-import { getServerSession } from "next-auth";
-
 import Section from "@/components/Section/Section";
-import ProfileForm from "@/components/Forms/Profile/Profile";
+import ProfileForm from "@/components/Forms/Profile";
 import Container from "@/components/Container/Container";
 
 export default async function Profile() {
