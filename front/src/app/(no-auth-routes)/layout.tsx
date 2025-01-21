@@ -4,8 +4,8 @@ import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import { nextAuthOptions } from "@/lib/authOptions";
 
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar/NavBar";
-import Footer from "@/components/Footer/Footer";
 
 interface PrivateLayoutProps {
     children: ReactNode
