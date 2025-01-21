@@ -12,11 +12,11 @@ import ReCaptchaField from '@/components/Recaptcha';
 
 import BackgroundEffects from '@/components/BackgroundEffects';
 
+import SignUpLink from './SignUpLink';
 import FormHeader from './FormHeader';
 import { FormField } from '../FormField';
 import PasswordField from './PasswordField';
 import FormContainer from '../FormContainer';
-import SignUpLink from './SignUpLink';
 import SubmitButton from '../../Buttons/Submit';
 
 interface SignInData {
