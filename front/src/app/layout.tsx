@@ -75,8 +75,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
         
-        {/* Adicione tags canônicas se necessário */}
-        <link rel="canonical" href="https://brightflow.vercel.app" />
+        <link rel="canonical" href="https://brightflow.com.br/" />
       </head>
       <body className={roboto.className}>
         <NextAuthSessionProvider>
