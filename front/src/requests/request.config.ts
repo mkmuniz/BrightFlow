@@ -44,10 +44,8 @@ export async function post(url: string, body: any) {
 
 export async function upload(url: string, body: any) {
     try {
-        const headers = await getHeaders();
         const res = await fetch(baseUrl + url, {
             method: 'POST',
-            headers,
             body
         });
 
