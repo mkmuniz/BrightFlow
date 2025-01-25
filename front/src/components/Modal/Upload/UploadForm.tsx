@@ -29,7 +29,7 @@ export function UploadForm({
         />
         <FileList uploadedFiles={uploadedFiles} />
         <ButtonSubmit isPending={formState.status === 'loading'} isDisabled={formState.status === 'loading'} >
-            {formState.status === 'loading' ? 'UPLOADING...' : 'UPLOAD'}
+            {formState.status === 'loading' ? 'Uploading...' : 'Upload File'}
         </ButtonSubmit>
     </form>
 };
