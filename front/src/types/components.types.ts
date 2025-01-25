@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type ContainerProps = {
     children: React.ReactNode,
     styles?: string,
@@ -35,4 +37,13 @@ export type HeaderContentProps = {
     isVisibleHeaderTitle: boolean,
     isVisibleHeaderSubtext: boolean,
     router: any
+};
+
+export type PrivateLayoutProps = {
+    children: ReactNode;
+};
+
+export type MenuItem = {
+    href: string;
+    description: string;
 };
