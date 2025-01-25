@@ -32,4 +32,16 @@ export class AuthController {
             return ErrorHandler.internalError(res);
         }
     }
+
+    static async validateToken(req: Request, res: Response) {
+        const { token } = req.params;
+        if (!token) return ErrorHandler.badRequest(res, 'Token is required');
+
+        try {
+            const isValid = await AuthServices.validateToken(token);
+            return res.status(200).json({ isValid });
+        } catch (error: any) {
+            return ErrorHandler.internalError(res);
+        }
+    }
 }

@@ -1,3 +1,5 @@
+import { Request } from "express";
+
 export interface UserDTO {
     name: string;
     email: string;
@@ -12,4 +14,12 @@ export interface UserEntity {
     password?: string;
     createdAt?: Date;
     updatedAt?: Date;
+}
+
+export interface AuthenticatedRequest extends Request {
+    user?: {
+        id: string;
+        email: string;
+        name: string;
+    }
 }

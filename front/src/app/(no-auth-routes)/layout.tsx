@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import { nextAuthOptions } from "@/lib/authOptions";
@@ -7,14 +5,7 @@ import { nextAuthOptions } from "@/lib/authOptions";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar/NavBar";
 
-interface PrivateLayoutProps {
-    children: ReactNode
-}
-
-interface MenuItem {
-    href: string;
-    description: string;
-}
+import { MenuItem, PrivateLayoutProps } from "@/types/components.types";
 
 const menuItems: MenuItem[] = [
     {
@@ -22,7 +13,7 @@ const menuItems: MenuItem[] = [
         description: "Home"
     },
     {
-        href: "/#solutions", 
+        href: "/#solutions",
         description: "Our Solutions"
     },
     {
@@ -34,9 +25,7 @@ const menuItems: MenuItem[] = [
 export default async function PrivateLayout({ children }: PrivateLayoutProps) {
     const session = await getServerSession(nextAuthOptions);
 
-    if (session) {
-        redirect('/user/home')
-    }
+    if (session) redirect('/user/home')
 
     return <>
         <NavBar navLinks={menuItems} />
