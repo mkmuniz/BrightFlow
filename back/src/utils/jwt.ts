@@ -33,4 +33,13 @@ export class TokenService {
     static verifyRefreshToken(token: string): string | jwt.JwtPayload {
         return jwt.verify(token, refreshTokenSecret);
     }
+
+    static verifyToken(token: string): TokenUser {
+        try {
+            const decoded = jwt.verify(token, accessTokenSecret) as TokenUser;
+            return decoded;
+        } catch (error) {
+            throw new Error('Invalid token');
+        }
+    }
 }
