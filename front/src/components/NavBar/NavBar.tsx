@@ -196,7 +196,7 @@ const MobileAuthButtons = ({
         <NavLink 
             href="/sign-up" 
             styles={`py-2 px-4 text-gray-300 hover:text-white transition-colors ${isOpen ? 'mobile:text-xl' : 'mobile:text-[0px] mobile:hidden'}`}
-            description="Cadastro"
+            description="Sign Up"
             onClick={() => handleLinkClick()}
         />
         <NavLink 
