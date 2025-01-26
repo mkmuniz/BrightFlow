@@ -1,14 +1,15 @@
 "use client"
 
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import BackgroundEffects from "@/components/BackgroundEffects";
 
 export default function NotFound() {
     return (
         <div className="min-h-screen bg-black text-gray-300 flex items-center justify-center relative overflow-hidden">
-            <div className="absolute top-1/4 -right-24 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[128px]"></div>
-            <div className="absolute bottom-1/4 -left-24 w-96 h-96 bg-[#00A3FF]/20 rounded-full blur-[128px]"></div>
+            <BackgroundEffects />
 
             <div className="relative text-center space-y-8">
                 <div className="relative flex justify-center">
