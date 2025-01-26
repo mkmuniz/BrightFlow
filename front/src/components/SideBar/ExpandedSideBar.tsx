@@ -1,8 +1,9 @@
+import { ExpandedLink } from './ExpandedLink';
+import LogoutButton from '@/app/(auth-routes)/logout/page';
+
 import HomeIcon from '@/../public/assets/icons/home.svg';
 import BilletsTable from '@/../public/assets/icons/table.svg';
 import ProfileIcon from '@/../public/assets/icons/profile.svg';
-import { ExpandedLink } from './ExpandedLink';
-import LogoutButton from '@/app/(auth-routes)/logout/page';
 
 export function ExpandedSideBar({ isOpen }: { isOpen: boolean }) {
     const sideBarLinks = [
