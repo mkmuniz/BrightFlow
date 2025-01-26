@@ -30,11 +30,13 @@ export function EnergyConsumptionPieChart({ pieData }: { pieData: any[] }) {
                         outerRadius={80}
                         fill="#8884d8"
                         dataKey="value"
+                        stroke="#27272a"
                     >
-                        {pieData.map((index: number) => (
+                        {pieData.map((entry, index) => (
                             <Cell
                                 key={`cell-${index}`}
                                 fill={COLORS[index % COLORS.length]}
+                                stroke="#27272a"
                             />
                         ))}
                     </Pie>
@@ -59,8 +61,11 @@ export function EnergyConsumptionPieChart({ pieData }: { pieData: any[] }) {
                             wordWrap: 'break-word',
                             color: '#ffffff'
                         }}
-                        formatter={(value: string) => {
-                            return value.length > 20 ? value.substring(0, 20) + '...' : value;
+                        formatter={(value: string, entry: any) => {
+                            const color = COLORS[pieData.findIndex(item => item.name === value) % COLORS.length];
+                            return <span style={{color: color}}>
+                                {value.length > 20 ? value.substring(0, 20) + '...' : value}
+                            </span>;
                         }}
                     />
                 </PieChart>
