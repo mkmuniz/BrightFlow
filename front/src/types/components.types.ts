@@ -94,3 +94,7 @@ export type TopBarProps = {
     isOpen: boolean; 
     setIsOpen: (value: boolean) => void;
 };
+
+export type DashboardCardProps = {
+    children: ReactNode;
+};
