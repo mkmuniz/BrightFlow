@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import { useQuery } from "@tanstack/react-query";
 
 import { Consume } from "@/types/components.types";
-import UserDashboardSkeleton from "../Skeletons/UserDashboard";
+import UserDashboardSkeleton from "../Skeletons/User/UserDashboard";
 
 import { BilletCard } from "./BilletCard";
 import { UserProfile } from "./UserProfile";
