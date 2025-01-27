@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { ExpandedLinkProps } from "@/types/components.types";
 
-export function ExpandedLink({ path, description, icon, alt }: any) {
+export function ExpandedLink({ path, description, icon, alt }: ExpandedLinkProps) {
     return <>
         <div className="w-full px-4">
             <a

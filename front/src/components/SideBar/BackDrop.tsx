@@ -1,4 +1,6 @@
-export function Backdrop({ isOpen }: { isOpen: boolean }) {
+import { BackDropProps } from "@/types/components.types";
+
+export function Backdrop({ isOpen }: BackDropProps) {
     return <>
         <div
             className={`fixed inset-0 z-[50] ${isOpen ? 'block' : 'hidden'}`}

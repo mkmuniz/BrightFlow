@@ -1,6 +1,7 @@
+import { ToggleButtonProps } from "@/types/components.types";
 import { ToggleIcon } from "./ToggleIcon";
 
-export function ToggleButton({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (value: boolean) => void }) {
+export function ToggleButton({ isOpen, setIsOpen }: ToggleButtonProps) {
     return <>
         <div>
             <button

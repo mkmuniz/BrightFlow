@@ -7,7 +7,7 @@ import { Backdrop } from './BackDrop';
 import { CollapsedSideBar } from './CollapsedSideBar';
 import { ExpandedSideBar } from './ExpandedSideBar';
 
-const SideBar = () => {
+export default function SideBar() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -23,5 +23,3 @@ const SideBar = () => {
         </>
     );
 };
-
-export default SideBar;
