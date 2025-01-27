@@ -5,7 +5,9 @@ import HomeIcon from '@/../public/assets/icons/home.svg';
 import BilletsTable from '@/../public/assets/icons/table.svg';
 import ProfileIcon from '@/../public/assets/icons/profile.svg';
 
-export function ExpandedSideBar({ isOpen }: { isOpen: boolean }) {
+import { ExpandedSideBarProps } from '@/types/components.types';
+
+export function ExpandedSideBar({ isOpen }: ExpandedSideBarProps) {
     const sideBarLinks = [
         {
             path: '/user/home',

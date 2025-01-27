@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { CollapsedLinkProps } from "@/types/components.types";  
 
-export function CollapsedLink({ path, icon, alt }: any) {
+export function CollapsedLink({ path, icon, alt }: CollapsedLinkProps) {
     return <>
         <div className="hs-tooltip inline-block">
             <a
