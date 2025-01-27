@@ -10,7 +10,7 @@ import Section from "../Section/Section";
 import ModalUpload from "../Modal/Upload";
 import Container from "../Container/Container";
 import ModalConfirmDelete from '../Modal/Upload/ConfirmDelete';
-import BilletsTableSkeleton from "../Skeletons/BilletsTable";
+import BilletsTableSkeleton from "../Skeletons/Billets/BilletsTable";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL_API;
 
