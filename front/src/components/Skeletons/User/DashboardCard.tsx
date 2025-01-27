@@ -1,4 +1,4 @@
-import { DashboardCardProps } from "../../types/components.types";
+import { DashboardCardProps } from "../../../types/components.types";
 
 export default function DashboardCard({ children }: DashboardCardProps) {
     return (
