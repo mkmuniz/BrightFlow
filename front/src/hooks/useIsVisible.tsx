@@ -1,6 +1,10 @@
 "use client"
 
-import { useEffect, useState, RefObject } from "react";
+import { 
+    useEffect, 
+    useState, 
+    RefObject 
+} from "react";
 
 export function useIsVisible(ref: RefObject<Element>): boolean {
     const [isIntersecting, setIntersecting] = useState(false);

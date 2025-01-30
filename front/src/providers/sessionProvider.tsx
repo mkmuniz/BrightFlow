@@ -3,7 +3,7 @@
 import { SessionProvider } from "next-auth/react";
 import { ReactNode } from "react";
 
-interface NextAuthSessionProviderProps {
+type NextAuthSessionProviderProps = {
     children: ReactNode
 }
 
