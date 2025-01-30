@@ -1,7 +1,15 @@
 "use client"
 
-import { ChangeEvent, useState, Fragment } from "react";
-import { PlusIcon, MagnifyingGlassIcon, ArrowDownTrayIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { 
+    ChangeEvent, 
+    useState 
+} from "react";
+import { 
+    PlusIcon, 
+    MagnifyingGlassIcon, 
+    ArrowDownTrayIcon, 
+    TrashIcon 
+} from "@heroicons/react/24/outline";
 
 import { useSession } from "next-auth/react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
