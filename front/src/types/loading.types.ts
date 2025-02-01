@@ -1,6 +1,6 @@
 export type LoadingOverlayProps = {
     formState: {
-        status: string,
-        message: string
+        status: string;
+        message: string;
     }
 }

@@ -13,6 +13,7 @@ import { HeaderContent } from "./HeaderContent";
 
 export default function Header() {
     const router = useRouter();
+    
     const refHeaderTitle = useRef<HTMLDivElement>(null);
     const refHeaderSubtext = useRef<HTMLSpanElement | HTMLParagraphElement>(null);
 
