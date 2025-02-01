@@ -2,6 +2,7 @@
 
 import { useRef, RefObject } from "react";
 import { useIsVisible } from "@/hooks/useIsVisible";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -10,6 +11,7 @@ import Container from "../Container/Container";
 
 export default function About() {
     const router = useRouter();
+
     const refTextDiv: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
     const refImagesDiv: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 

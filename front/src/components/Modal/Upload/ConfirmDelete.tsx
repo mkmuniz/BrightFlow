@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { ModalConfirmDeleteProps } from '../../../types/modal.types';
 import { ModalContent } from '../ModalContent';
 import { ModalActions } from '../ModalActions';
 import { ModalContainer } from '../ModalContainer';
+import { ModalConfirmDeleteProps } from '../../../types/modal.types';
 
-export default function ModalConfirmDelete({ open, handleOpen, onConfirm, isDeleting }: ModalConfirmDeleteProps) {
+export default function ModalConfirmDelete({
+    open,
+    handleOpen,
+    onConfirm,
+    isDeleting
+}: ModalConfirmDeleteProps) {
     return (
         <ModalContainer open={open}>
             <Backdrop handleOpen={handleOpen} />
