@@ -45,19 +45,19 @@ export type ProfilePictureProps = {
 }
 
 export type SubmitButtonProps = {
-    isPending: boolean,
-    isDisabled?: boolean,
-    children: React.ReactNode
+    isPending: boolean;
+    isDisabled?: boolean;
+    children: React.ReactNode;
 }
 
 export type CloseButtonProps = {
-    handleOpen: VoidFunction
+    handleOpen: VoidFunction;
 }
 
 export type PasswordFieldProps = {
-    register: any,
-    errors: any,
-    showPassword: boolean,
+    register: any;
+    errors: any;
+    showPassword: boolean;
     togglePasswordVisibility: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -66,7 +66,7 @@ export type PasswordInputProps = {
     name: "password" | "confirmPassword";
     register: UseFormRegister<SignUpDataForm>;
     showPassword: boolean;
-    toggleVisibility: () => void;
+    toggleVisibility: VoidFunction;
     error?: string;
     validation?: object;
 }

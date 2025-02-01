@@ -25,8 +25,8 @@ export type FileUploadAreaProps = {
 
 export type ModalUploadProps = {
     open: boolean;
-    handleOpen: () => void;
-    onUploadSuccess: () => void;
+    handleOpen: VoidFunction;
+    onUploadSuccess: VoidFunction;
 }
 
 export type FileListProps = {

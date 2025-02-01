@@ -2,7 +2,7 @@ import { Url } from "next/dist/shared/lib/router/router";
 import { ReactNode } from "react";
 
 export type LogoProps = {
-    handleLinkClick: () => void;
+    handleLinkClick: VoidFunction;
 };
 
 export type NavBarProps = {
@@ -23,26 +23,26 @@ export type MobileMenuButtonProps = {
 };
 
 export type MobileAuthButtonsProps = {
-    isOpen: boolean,
-    handleLinkClick: () => void
+    isOpen: boolean;
+    handleLinkClick: VoidFunction;
 };
 
 export type NavLinksProps = {
-    navLinks: any[],
-    isOpen: boolean,
-    handleLinkClick: () => void
+    navLinks: any[];
+    isOpen: boolean;
+    handleLinkClick: VoidFunction;
 };
 
 export type NavLinkProps = {
-    href: Url,
-    description?: any,
-    styles: string,
-    children?: ReactNode,
-    onClick?: () => void
+    href: Url;
+    description?: any;
+    styles: string;
+    children?: ReactNode;
+    onClick?: VoidFunction;
 };
 
 export type NavMenuProps = {
-    isOpen: boolean,
-    navLinks: any[],
-    handleLinkClick: () => void
+    isOpen: boolean;
+    navLinks: any[];
+    handleLinkClick: VoidFunction;
 }; 

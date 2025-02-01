@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
 export type ContainerProps = {
-    children: ReactNode,
-    styles?: string,
+    children: ReactNode;
+    styles?: string;
 };
 
 export type PrivateLayoutProps = {

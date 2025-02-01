@@ -8,20 +8,24 @@ export type ModalConfirmDeleteProps = {
 }
 
 export type ModalContainerProps = {
-    children: React.ReactNode,
-    open: boolean
+    children: React.ReactNode;
+    open: boolean;
 }
 
 export type ModalContentProps = {
-    children: React.ReactNode,
-    handleOpen: VoidFunction,
-    onConfirm: VoidFunction,
-    isDeleting: boolean
+    children: React.ReactNode;
+    handleOpen: VoidFunction;
+    onConfirm: VoidFunction;
+    isDeleting: boolean;
 }
 
 export type ModalActionsProps = {
-    children: React.ReactNode,
-    handleOpen: VoidFunction,
-    onConfirm: VoidFunction,
-    isDeleting: boolean
+    children: React.ReactNode;
+    handleOpen: VoidFunction;
+    onConfirm: VoidFunction;
+    isDeleting: boolean;
 }
+
+export type CancelButtonProps = {
+    handleOpen: VoidFunction;
+};
