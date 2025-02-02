@@ -58,6 +58,23 @@ export async function upload(url: string, body: any) {
     }
 }
 
+export async function del(url: string) {
+    try {
+        const headers = await getHeaders();
+        const res = await fetch(baseUrl + url, {
+            method: 'DELETE',
+            headers,
+        });
+
+        return {
+            data: res.json(),
+            status: res.status
+        };
+    } catch (err) {
+        console.error(err);
+    }
+}
+
 export async function patch(url: string, body: any) {
     try {
         const headers = await getHeaders();

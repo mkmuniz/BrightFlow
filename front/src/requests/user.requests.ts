@@ -20,3 +20,7 @@ export async function getRefreshToken(body: any) {
 export async function fetchUserProfile(id: string) {
     return get(`user/profile/${id}`);
 };
+
+export async function validateToken() {
+    return get('validate');
+};
