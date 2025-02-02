@@ -1,23 +1,13 @@
 import React from "react";
 
-import { Typography } from "@material-tailwind/react";
 import Link from "next/link";
-
-interface Billet {
-    clientNumber: string;
-    month: string;
-}
-
-interface TableRowProps {
-    data: Billet[];
-}
+import { Typography } from "@material-tailwind/react";
+import { TableRowProps } from "@/types/table.types";
 
 export default function TableRow({ data }: TableRowProps) {
     return (
         <>
-            {data.map((billet, index) => {
-                const isLast = index === data.length - 1;
-
+            {data.map((billet) => {
                 return (
                     <tr key={billet.clientNumber}>
                         <td className="p-4">

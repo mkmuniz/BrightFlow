@@ -1,9 +1,6 @@
 import React from 'react';
+import { TableSearchInputProps } from '@/types/contexts.types';
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-
-interface TableSearchInputProps {
-    handleSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
 export default function TableSearchInput({ handleSearch }: TableSearchInputProps) {
     return (

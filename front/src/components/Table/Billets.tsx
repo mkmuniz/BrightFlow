@@ -20,6 +20,8 @@ import Container from "../Container/Container";
 import ModalConfirmDelete from '../Modal/Upload/ConfirmDelete';
 import BilletsTableSkeleton from "../Skeletons/Billets/BilletsTable";
 
+import { deleteBillet } from "@/requests/billet.requests";
+
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL_API;
 
 const TABLE_HEAD = ["Client Number", "Month", "Actions"];
@@ -27,11 +29,13 @@ const TABLE_HEAD = ["Client Number", "Month", "Actions"];
 export function BilletsTable() {
     const [open, setOpen] = useState<boolean>(false);
     const [search, setSearch] = useState<string>('');
-    const { data: session } = useSession();
-    const queryClient = useQueryClient();
     const [isDeleting, setIsDeleting] = useState(false);
-    const [selectedBilletId, setSelectedBilletId] = useState<string | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedBilletId, setSelectedBilletId] = useState<string | null>(null);
+
+    const { data: session } = useSession();
+
+    const queryClient = useQueryClient();
 
     const { data: billets = [], isLoading, error } = useQuery({
         queryKey: ['billets', session?.user?.id],
@@ -94,16 +98,8 @@ export function BilletsTable() {
         if (!selectedBilletId) return;
         setIsDeleting(true);
         try {
-            const response = await fetch(`${baseUrl}billet/${selectedBilletId}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (!response.ok) {
-                throw new Error('Error deleting the bank slip');
-            }
+            const response = await deleteBillet(selectedBilletId);
+            if (response?.status !== 200) throw new Error('Error deleting the bank slip');
 
             queryClient.invalidateQueries({ queryKey: ['billets', session?.user?.id] });
             closeModal();
@@ -114,9 +110,7 @@ export function BilletsTable() {
         }
     };
 
-    if (isLoading) {
-        return <BilletsTableSkeleton />;
-    }
+    if (isLoading) return <BilletsTableSkeleton />;
 
     return (
         <Section styles="bg-black min-h-screen w-full">
