@@ -1,4 +1,4 @@
-import { Billet } from "@/types/components.types";
+import { BilletType } from "@/types/components.types";
 import {
     CartesianGrid,
     Legend,
@@ -14,7 +14,7 @@ export function EnergyConsumptionChart({ billets }: { billets: any }) {
     const processTimeSeriesData = () => {
         if (!billets) return [];
 
-        return billets.map((billet: Billet) => ({
+        return billets.map((billet: BilletType) => ({
             name: billet.month,
             energy: billet.consumes.find(c => c.type === 'Energia Elétrica')?.quantity || 0,
             compensated: Math.abs(billet.consumes.find(c => c.type === 'Energia Compensada GD I')?.quantity || 0)
