@@ -3,7 +3,7 @@ export type MenuItem = {
     description: string;
 };
 
-export type Billet = {
+export type BilletType = {
     id: string;
     month: string;
     consumes: any[];
