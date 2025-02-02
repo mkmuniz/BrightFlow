@@ -14,7 +14,7 @@ export class TokenService {
         const accessToken = jwt.sign(
             { id: user.id, email: user.email, name: user.name },
             accessTokenSecret,
-            { expiresIn: '15m' }
+            { expiresIn: '60m' }
         );
 
         const refreshToken = jwt.sign(
