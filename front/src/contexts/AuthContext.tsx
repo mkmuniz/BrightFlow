@@ -1,14 +1,7 @@
 "use client"
 
+import { AuthContextType, AuthProviderProps } from "@/types/contexts.types";
 import React, { createContext, ReactNode } from "react";
-
-type AuthContextType = {
-    isAuthenticated: boolean;
-};
-
-type AuthProviderProps = {
-    children: ReactNode;
-};
 
 export const AuthContext = createContext<AuthContextType>({ isAuthenticated: false });
 

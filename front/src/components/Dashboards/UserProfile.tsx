@@ -9,8 +9,8 @@ export function UserProfile(props: any) {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6] to-[#00A3FF] rounded-full blur-lg opacity-20"></div>
                         <Image
                             src={props.profilePicture}
-                            width={80}
-                            height={80}
+                            width={64}
+                            height={64}
                             alt="Profile"
                             priority
                             className="w-20 h-20 rounded-full relative z-10 border-2 border-[#8B5CF6]/30"
@@ -18,7 +18,7 @@ export function UserProfile(props: any) {
                     </div>
                 ) : (
                     <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#00A3FF] flex items-center justify-center text-3xl text-white font-bold">
-                        {props.name[0]}
+                        {props?.name ? props?.name[0] : ''}
                     </div>
                 )}
                 <span className="mt-4 text-xl font-medium text-white">

@@ -58,12 +58,14 @@ export default function SignInForm() {
                 redirect: false
             });
 
-            if (response?.error) {
-                setError(response.error);
-                return;
-            }
+            {
+                !response?.error ? (
+                    setTimeout(() => {
+                        router.replace('/user/home');
+                    }, 3000)
+                ) : (setError(response?.error))
+            };
 
-            router.replace('/user/home');
         } catch (err) {
             setError('Failed to sign in. Please try again.');
         } finally {
@@ -77,10 +79,10 @@ export default function SignInForm() {
             <FormContainer>
                 <FormHeader />
                 <form onSubmit={handleSubmit(handleSignIn)} className="space-y-6">
-                    <FormField 
+                    <FormField
                         label="Email"
-                        name="email" 
-                        register={register} 
+                        name="email"
+                        register={register}
                         errors={errors}
                         placeholder='your@email.com'
                     />

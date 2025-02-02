@@ -9,11 +9,9 @@ export const authMiddleware = async (
     next: NextFunction
 ) => {
     const authHeader = req.headers.authorization;
-
     if (!authHeader) return ErrorHandler.unAuthorized(res, 'No token provided');
 
     const [, token] = authHeader.split(' ');
-
     if (!token) return ErrorHandler.unAuthorized(res, 'Invalid token');
 
     try {
