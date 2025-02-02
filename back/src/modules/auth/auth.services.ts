@@ -56,13 +56,4 @@ export class AuthServices {
             where: { userId }
         });
     }
-
-    static async validateToken(token: string): Promise<boolean> {
-        try {
-            const isValid = TokenService.verifyToken(token);
-            return Boolean(isValid);
-        } catch (error) {
-            return false;
-        }
-    }
 }
