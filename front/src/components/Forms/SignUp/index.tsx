@@ -25,6 +25,7 @@ import SubmitButton from '@/components/Buttons/Submit';
 import BackgroundEffects from '@/components/BackgroundEffects';
 
 import { SignUpDataForm, PasswordStrength } from '@/types/forms.types';
+import { signIn } from 'next-auth/react';
 
 export default function SignUpForm() {
     const [errorSignUp, setError] = useState<string>('');
@@ -46,6 +47,7 @@ export default function SignUpForm() {
     const router = useRouter();
 
     const password = watch('password');
+    const email = watch('email');
 
     useEffect(() => {
         if (password) {
@@ -92,19 +94,42 @@ export default function SignUpForm() {
 
     const { mutate }: any = useMutation({
         mutationFn: signUp,
-        onSuccess: (data: any) => {
+        onSuccess: async (data: any) => {
             setIsSubmitting(false);
             if (data.status === 409) return setError('Email already exists');
             if (data.status === 500) return setError('Internal error, we are working on it!');
             if (data.status === 404) return setError('Not found, try again!');
             if (data.status === 201) {
-                setSuccess('Successfully signed up! Redirecting to login...');
-                setTimeout(() => {
-                    router.replace('/login');
-                }, 5000);
-            };
+                try {
+                    const recaptchaToken = await recaptchaRef.current?.executeAsync();
+                    recaptchaRef.current?.reset();
+
+                    if (!recaptchaToken) {
+                        setError('Security verification failed. Please try again.');
+                        return;
+                    }
+
+                    const response = await signIn('user-login', {
+                        email,
+                        password,
+                        recaptchaToken,
+                        redirect: false
+                    });
+
+                    if (!response?.error) {
+                        setSuccess('Successfully signed up! Wait a moment...');
+                        setTimeout(() => {
+                            router.replace('/user/home');
+                        }, 3000);
+                    }
+                } catch (err: any) {
+                    console.error(err);
+                    setError("Internal Error, we're working on it");
+                }
+            }
         },
-        onError: (error: any) => {
+        onError: (err: any) => {
+            console.error(err);
             setIsSubmitting(false);
             setError('Failed to sign up. Please try again.');
         }
