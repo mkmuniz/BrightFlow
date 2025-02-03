@@ -8,18 +8,18 @@ import { Roboto } from 'next/font/google';
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'BrightFlow - Seu Painel de Boletos',
-  description: 'Gerencie seus boletos de forma inteligente com o BrightFlow. Upload, extração automática de dados e dashboard personalizado para suas necessidades.',
+  title: 'BrightFlow - Electricity Bill Management',
+  description: 'Manage your electricity bills intelligently with BrightFlow. Upload, automatic data extraction, and a personalized dashboard for your needs.',
   metadataBase: new URL('https://brightflow.com.br'),
   authors: [{ name: 'Mikael Muniz Ribeiro' }],
-  keywords: ['boletos', 'gestão financeira', 'dashboard', 'extração de dados', 'finanças'],
+  keywords: ['electricity bills', 'financial management', 'dashboard', 'data extraction', 'utilities'],
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
+    locale: 'en_US',
     url: 'https://brightflow.com.br',
     siteName: 'BrightFlow',
-    title: 'BrightFlow - Gestão Inteligente de Boletos',
-    description: 'Simplifique a gestão dos seus boletos com o BrightFlow. Upload fácil, extração automática de dados e visualização intuitiva em um só lugar.',
+    title: 'BrightFlow - Smart Electricity Bill Management',
+    description: 'Simplify your electricity bill management with BrightFlow. Easy upload, automatic data extraction, and intuitive visualization all in one place.',
     images: [
       {
         url: '/Brightflow-og.png',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BrightFlow - Gestão Inteligente de Boletos',
-    description: 'Simplifique a gestão dos seus boletos com o BrightFlow. Upload fácil, extração automática de dados e visualização intuitiva.',
+    title: 'BrightFlow - Smart Electricity Bill Management',
+    description: 'Simplify your electricity bill management with BrightFlow. Easy upload, automatic data extraction, and intuitive visualization.',
     images: ['/Brightflow-og.png'],
     creator: '@mkmuniz',
   },
