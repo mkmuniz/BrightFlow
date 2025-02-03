@@ -83,6 +83,8 @@ Extraia as seguintes informações deste boleto e retorne APENAS o JSON, sem nen
 
 Se alguma das informações não for encontrada, como o quantity e value, retorne o valor 0.
 
+Caso, por exemplo, alguns campos tenham vários valores referentes a eles, pegue todos e os some, assim retornando o valor único do campo.
+
 Texto do boleto:
 ${text}
 
