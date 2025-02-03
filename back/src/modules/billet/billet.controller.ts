@@ -60,7 +60,7 @@ export class BilletController {
 
         try {
             await this.billetServices.deleteBillet(id);
-            return res.status(204).send({ message: 'Billet deleted successfully'});
+            return res.status(200).send({ message: 'Billet deleted successfully'});
         } catch (err: any) {
             const errorMessage = err.message;
             console.error(err);
