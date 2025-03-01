@@ -1,18 +1,18 @@
 import { ReactNode } from "react";
 
-export type ContainerProps = {
+export interface ContainerProps {
     children: ReactNode;
     styles?: string;
 };
 
-export type PrivateLayoutProps = {
+export interface PrivateLayoutProps {
     children: ReactNode;
 };
 
-export type BackDropProps = {
+export interface BackDropProps {
     isOpen: boolean;
 };
 
-export type DashboardCardProps = {
+export interface DashboardCardProps extends PrivateLayoutProps {
     children: ReactNode;
 }; 

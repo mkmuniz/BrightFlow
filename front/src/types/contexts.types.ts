@@ -4,10 +4,10 @@ export type AuthContextType = {
     isAuthenticated: boolean;
 };
 
-export type AuthProviderProps = {
+export interface AuthProviderProps {
     children: ReactNode;
 };
 
-export type TableSearchInputProps = {
+export interface TableSearchInputProps {
     handleSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };

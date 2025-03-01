@@ -37,31 +37,31 @@ export interface FormFieldProps {
     validation?: object;
 }
 
-export type ProfilePictureProps = {
+export interface ProfilePictureProps {
     preview: string;
     fileInputRef: React.RefObject<HTMLInputElement>;
     register: any;
     handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export type SubmitButtonProps = {
+export interface SubmitButtonProps {
     isPending: boolean;
     isDisabled?: boolean;
     children: React.ReactNode;
 }
 
-export type CloseButtonProps = {
+export interface CloseButtonProps {
     handleOpen: VoidFunction;
 }
 
-export type PasswordFieldProps = {
+export interface PasswordFieldProps {
     register: any;
     errors: any;
     showPassword: boolean;
     togglePasswordVisibility: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-export type PasswordInputProps = {
+export interface PasswordInputProps {
     label: string;
     name: "password" | "confirmPassword";
     register: UseFormRegister<SignUpDataForm>;
@@ -76,14 +76,14 @@ export type PasswordStrengthIndicatorProps = {
     passwordStrength: PasswordStrength;
 }
 
-export type TermsAndConditionsProps = {
+export interface TermsAndConditionsProps {
     isTermsOpen: boolean;
     setIsTermsOpen: (value: boolean) => void;
     register: UseFormRegister<SignUpDataForm>;
     error?: string;
 }
 
-export type ProfilePictureUploadProps = {
+export interface ProfilePictureUploadProps {
     preview: string;
     fileInputRef: React.RefObject<HTMLInputElement>;
     register: UseFormRegister<SignUpDataForm>;

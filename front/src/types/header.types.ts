@@ -1,30 +1,30 @@
-export type CallToActionProps = {
+export interface CallToActionProps {
     isVisibleHeaderSubtext: boolean;
     router: any;
 };
 
-export type DescriptionHeaderProps = {
+export interface DescriptionHeaderProps {
     refHeaderSubtext: React.RefObject<HTMLSpanElement | HTMLParagraphElement>;
     isVisibleHeaderSubtext: boolean;
 };
 
-export type BrandTitleProps = {
+export interface BrandTitleProps {
     refHeaderSubtext: React.RefObject<HTMLSpanElement | HTMLParagraphElement>;
     isVisibleHeaderSubtext: boolean;
 };
 
-export type ContentSectionProps = {
+export interface ContentSectionProps {
     refHeaderSubtext: React.RefObject<HTMLSpanElement | HTMLParagraphElement>;
     isVisibleHeaderSubtext: boolean;
     router: any
 };
 
-export type LogoSectionProps = {
+export interface LogoSectionProps {
     refHeaderTitle: React.RefObject<HTMLDivElement>;
     isVisibleHeaderTitle: boolean;
 };
 
-export type HeaderContentProps = {
+export interface HeaderContentProps {
     refHeaderTitle: React.RefObject<HTMLDivElement>;
     refHeaderSubtext: React.RefObject<HTMLSpanElement | HTMLParagraphElement>;
     isVisibleHeaderTitle: boolean;

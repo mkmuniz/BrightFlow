@@ -1,31 +1,26 @@
 import React from "react";
 
-export type ModalConfirmDeleteProps = {
-    open: boolean;
-    handleOpen: VoidFunction;
-    onConfirm: VoidFunction;
+interface ModalControlProps {
+    handleOpen: () => void;
+    onConfirm: () => void;
     isDeleting: boolean;
 }
 
-export type ModalContainerProps = {
-    children: React.ReactNode;
+export interface ModalConfirmDeleteProps extends ModalControlProps {
     open: boolean;
 }
 
-export type ModalContentProps = {
+export interface ModalContainerProps {
     children: React.ReactNode;
-    handleOpen: VoidFunction;
-    onConfirm: VoidFunction;
-    isDeleting: boolean;
+    open: boolean;
 }
 
-export type ModalActionsProps = {
+export interface ModalContentProps extends ModalControlProps {
     children: React.ReactNode;
-    handleOpen: VoidFunction;
-    onConfirm: VoidFunction;
-    isDeleting: boolean;
 }
 
-export type CancelButtonProps = {
-    handleOpen: VoidFunction;
-};
+export interface ModalActionsProps extends ModalControlProps {
+    children: React.ReactNode;
+}
+
+export type CancelButtonProps = Pick<ModalControlProps, "handleOpen">;

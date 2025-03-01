@@ -1,8 +1,8 @@
-export type TableCellProps = {
+export interface TableCellProps {
     width: string;
 };
 
-export type HeaderCellProps = {
+export interface HeaderCellProps {
     width: string;
 };
 
@@ -11,6 +11,6 @@ export type Billet = {
     month: string;
 };
 
-export type TableRowProps = {
+export interface TableRowProps {
     data: Billet[];
 };
