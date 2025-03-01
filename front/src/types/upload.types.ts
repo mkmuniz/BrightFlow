@@ -1,6 +1,6 @@
 import { DragEvent } from "react"
 
-export type UploadFormProps = {
+export interface UploadFormProps {
     handleSubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void>,
     uploadedFiles: File[],
     formState: { status: string, message: string },
@@ -13,7 +13,7 @@ export type UploadFormProps = {
     fileInputRef: React.RefObject<HTMLInputElement>
 }
 
-export type FileUploadAreaProps = {
+export interface FileUploadAreaProps {
     isDragging: boolean,
     handleDragEnter: (e: DragEvent<HTMLLabelElement>) => void,
     handleDragLeave: (e: DragEvent<HTMLLabelElement>) => void,
@@ -23,12 +23,12 @@ export type FileUploadAreaProps = {
     fileInputRef: React.RefObject<HTMLInputElement>
 }
 
-export type ModalUploadProps = {
+export interface ModalUploadProps {
     open: boolean;
     handleOpen: VoidFunction;
     onUploadSuccess: VoidFunction;
 }
 
-export type FileListProps = {
+export interface FileListProps {
     uploadedFiles: File[];
 }

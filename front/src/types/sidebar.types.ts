@@ -1,30 +1,30 @@
-export type CollapsedLinkProps = {
+export interface CollapsedLinkProps {
     path: string;
     icon: any;
     alt: string;
 };
 
-export type ExpandedLinkProps = {
+export interface ExpandedLinkProps {
     path: string;
     icon: any;
     description: string;
     alt: string;
 };
 
-export type ExpandedSideBarProps = {
+export interface ExpandedSideBarProps {
     isOpen: boolean;
 };
 
-export type ToggleButtonProps = {
+export interface ToggleButtonProps {
     isOpen: boolean;
     setIsOpen: (value: boolean) => void;
 };
 
-export type ToggleIconProps = {
+export interface ToggleIconProps {
     isOpen: boolean;
 };
 
-export type TopBarProps = {
+export interface TopBarProps {
     isOpen: boolean;
     setIsOpen: (value: boolean) => void;
 }; 

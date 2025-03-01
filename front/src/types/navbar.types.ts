@@ -1,39 +1,39 @@
 import { Url } from "next/dist/shared/lib/router/router";
 import { ReactNode } from "react";
 
-export type LogoProps = {
+export interface LogoProps {
     handleLinkClick: VoidFunction;
 };
 
-export type NavBarProps = {
+export interface NavBarProps {
     navLinks: Array<{
         href: string;
         description: string;
     }>;
 };
 
-export type NavButtonsProps = {
+export interface NavButtonsProps {
     isOpen: boolean;
     setOpen: (value: boolean) => void;
 };
 
-export type MobileMenuButtonProps = {
+export interface MobileMenuButtonProps {
     isOpen: boolean;
     setOpen: (value: boolean) => void;
 };
 
-export type MobileAuthButtonsProps = {
+export interface MobileAuthButtonsProps {
     isOpen: boolean;
     handleLinkClick: VoidFunction;
 };
 
-export type NavLinksProps = {
+export interface NavLinksProps {
     navLinks: any[];
     isOpen: boolean;
     handleLinkClick: VoidFunction;
 };
 
-export type NavLinkProps = {
+export interface NavLinkProps {
     href: Url;
     description?: any;
     styles: string;
@@ -41,7 +41,7 @@ export type NavLinkProps = {
     onClick?: VoidFunction;
 };
 
-export type NavMenuProps = {
+export interface NavMenuProps {
     isOpen: boolean;
     navLinks: any[];
     handleLinkClick: VoidFunction;

@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-export type NextAuthSessionProviderProps = {
+export interface NextAuthSessionProviderProps {
     children: ReactNode;
 };
 
-export type TanstackProviderProps = {
+export interface TanstackProviderProps {
     children: ReactNode;
 };

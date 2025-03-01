@@ -1,6 +1,6 @@
 import { RefObject } from "react";
 
-export type AboutProps = {
+export interface AboutProps {
     refTextDiv: RefObject<HTMLDivElement>;
     refImagesDiv: RefObject<HTMLDivElement>;
     isVisibleTextDiv: boolean;
@@ -8,19 +8,19 @@ export type AboutProps = {
     router: any;
 };
 
-export type AboutImageProps = {
+export interface AboutImageProps {
     refImagesDiv: RefObject<HTMLDivElement>;
     isVisibleImagesDiv: boolean;
 };
 
-export type ImageCardProps = {
+export interface ImageCardProps {
     src: string;
     alt: string;
     aspectRatio: string;
     hoverColor: string;
 };
 
-export type AboutDescriptionProps = {
+export interface AboutDescriptionProps {
     refTextDiv: RefObject<HTMLDivElement>;
     isVisibleTextDiv: boolean;
     router: any;
